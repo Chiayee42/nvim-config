@@ -1,0 +1,13 @@
+let loaded_matchparen=1
+set number
+set numberwidth=4
+set shiftround
+set relativenumber
+set smartindent
+" 自动换行缩进
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+syntax on
