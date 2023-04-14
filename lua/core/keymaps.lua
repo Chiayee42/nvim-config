@@ -1,4 +1,4 @@
-vim.g.mapleader = "\\"
+vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
@@ -19,10 +19,22 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直新增窗口
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- 切换buffer
-keymap.set("n", "<C-L>", ":bnext<CR>")
-keymap.set("n", "<C-H>", ":bprevious<CR>")
+keymap.set("n", "<leader>l", ":bnext<CR>")
+keymap.set("n", "<leader>h", ":bprevious<CR>")
 
+-- 查看最近文件
+keymap.set("n", "<leader>rf", ":browse oldfiles<CR>")
+
+-- 多行移动
+keymap.set("n", "J", "jjjjj")
+keymap.set("n", "K", "kkkkk")
+
+-- 删除重写
+keymap.set("v", "<leader>x", "\"_di")
 -- ---------- 插件 ---------- ---
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+
+
 

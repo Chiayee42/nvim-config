@@ -62,6 +62,9 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use "lambdalisue/suda.vim"  -- sudo保存
+  use "numToStr/FTerm.nvim"
+
   if packer_bootstrap then
     require('packer').sync()
   end
