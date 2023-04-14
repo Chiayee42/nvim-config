@@ -27,7 +27,7 @@ opt.wrap = false
 opt.cursorline = true
 
 --启用鼠标
-opt.mouse:append("a")
+opt.mouse:append("n")
 
 -- 系统剪切板
 opt.clipboard:append("unnamedplus")

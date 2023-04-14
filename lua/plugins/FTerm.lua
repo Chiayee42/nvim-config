@@ -5,7 +5,3 @@ require'FTerm'.setup({
         width = 0.9,
     },
 })
-
--- Example keybindings
-vim.keymap.set('n', '<leader>i', '<CMD>lua require("FTerm").toggle()<CR>')
-vim.keymap.set('t', '<leader>i', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')

@@ -63,7 +63,34 @@ return require('packer').startup(function(use)
   }
 
   use "lambdalisue/suda.vim"  -- sudo保存
-  use "numToStr/FTerm.nvim"
+  use {"numToStr/FTerm.nvim"} -- 悬浮终端
+
+  use "nvim-tree/nvim-web-devicons"  -- dashboard-nvim的前置
+  use {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        -- config
+      }
+    end,
+  requires = {'nvim-tree/nvim-web-devicons'}
+}
+
+  use {
+  "AckslD/nvim-neoclip.lua",  -- 剪切板管理工具
+  requires = {
+    -- you'll need at least one of these
+    'nvim-telescope/telescope.nvim'
+    -- {'ibhagwan/fzf-lua'},
+  },
+  config = function()
+    require('neoclip').setup()
+  end,
+}
+
+  use 'mbbill/undotree'
+    
 
   if packer_bootstrap then
     require('packer').sync()
