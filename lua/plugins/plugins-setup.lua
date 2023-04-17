@@ -63,7 +63,12 @@ return require('packer').startup(function(use)
   }
 
   use "lambdalisue/suda.vim"  -- sudo保存
-  use "numToStr/FTerm.nvim"
+  use "numToStr/FTerm.nvim"  -- vim内的浮动终端
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   if packer_bootstrap then
     require('packer').sync()
